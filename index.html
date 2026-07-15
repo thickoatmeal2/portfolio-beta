@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacob Baldwin — UI/UX Designer &amp; AI Builder</title>
+<meta name="description" content="Jacob Baldwin is a UI/UX designer and AI builder crafting thoughtful interfaces and intelligent systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-mark" aria-label="Jacob Baldwin, home">JB</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="blog.html">Journal</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="blog.html">Journal</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-coords" id="heroCoords" aria-hidden="true">X: 000 Y: 000</div>
+    <div class="hero-inner">
+      <p class="eyebrow mono">Portfolio — Design &amp; Applied AI</p>
+      <h1 class="hero-title">Jacob Baldwin</h1>
+      <p class="hero-role mono">UI/UX Designer &amp; AI Builder</p>
+      <p class="hero-lede">
+        ML engineer with a designer's eye.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section" id="work">
+    <div class="section-head">
+      <p class="eyebrow mono">Selected Work</p>
+      <h2>A few things I've built and designed.</h2>
+    </div>
+
+    <div class="work-grid work-grid-empty">
+
+      <article class="work-card work-card-empty"></article>
+      <article class="work-card work-card-empty"></article>
+      <article class="work-card work-card-empty"></article>
+      <article class="work-card work-card-empty"></article>
+
+    </div>
+    <p class="work-empty-note mono">Case studies in progress — check back soon.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-about" id="about">
+    <div class="section-head">
+      <p class="eyebrow mono">About</p>
+      <h2>Hi, I'm Jacob.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="about-skills">
+        <p class="mono skills-label">Focus areas</p>
+        <ul class="skills-list">
+          <li>Product &amp; UX Design</li>
+          <li>Design Systems</li>
+          <li>Prototyping</li>
+          <li>Applied AI / LLM Tooling</li>
+          <li>User Research</li>
+          <li>Front-end (HTML/CSS/JS)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="section" id="resume">
+    <div class="section-head">
+      <p class="eyebrow mono">Resume</p>
+      <h2>Where I've worked.</h2>
+    </div>
+
+    <div class="resume-list resume-list-empty">
+      <div class="resume-item-empty"></div>
+      <div class="resume-item-empty"></div>
+      <div class="resume-item-empty"></div>
+    </div>
+    <p class="work-empty-note mono">Full résumé coming soon.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="section-head">
+      <p class="eyebrow mono">Contact</p>
+      <h2>Let's talk.</h2>
+    </div>
+    <p class="contact-lede">
+      Open to new roles and interesting collaborations. The fastest way
+      to reach me is email.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:hello@jacobbaldwin.com" class="contact-link">hello@jacobbaldwin.com</a>
+      <div class="contact-social">
+        <a href="#" class="contact-social-link">LinkedIn</a>
+        <a href="#" class="contact-social-link">GitHub</a>
+        <a href="#" class="contact-social-link">Dribbble</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="mono">© <span id="year"></span> Jacob Baldwin</p>
+  <a href="blog.html" class="mono footer-link">Journal →</a>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

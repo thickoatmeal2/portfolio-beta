@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Jacob Baldwin</title>
+<meta name="description" content="Notes on design, AI, and building things — Jacob Baldwin's journal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-mark" aria-label="Jacob Baldwin, home">JB</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="blog.html" class="is-active">Journal</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="blog.html">Journal</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="section journal-hero">
+    <p class="eyebrow mono">Journal</p>
+    <h1>Notes on design, AI, and building things.</h1>
+    <p class="hero-lede">
+      A mix of write-ups and shorter journal entries — some polished,
+      some rougher. New posts appear at the top.
+    </p>
+  </section>
+
+  <section class="section journal-list-section">
+    <div id="journalList" class="journal-list">
+      <!-- Populated by js/posts.js + js/main.js -->
+    </div>
+    <p id="journalEmpty" class="journal-empty mono" hidden>
+      No entries yet — check back soon.
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="mono">© <span id="year"></span> Jacob Baldwin</p>
+  <a href="index.html" class="mono footer-link">← Home</a>
+</footer>
+
+<script src="js/posts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
