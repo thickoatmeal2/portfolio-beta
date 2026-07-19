@@ -1,4 +1,45 @@
 // ===========================================================
+// Dark mode toggle
+// ===========================================================
+(function () {
+  const root = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+  const STORAGE_KEY = "jb-theme";
+
+  function getStoredTheme() {
+    try {
+      return localStorage.getItem(STORAGE_KEY);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function storeTheme(value) {
+    try {
+      localStorage.setItem(STORAGE_KEY, value);
+    } catch (e) {
+      // Storage unavailable (e.g. private browsing, sandboxed preview) — theme
+      // still works for the current page load, it just won't persist.
+    }
+  }
+
+  // Theme is already set by the inline script in <head> to prevent a flash;
+  // this just syncs the toggle button's state and wires up the click handler.
+  if (toggle) {
+    const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    toggle.setAttribute("aria-pressed", String(current === "dark"));
+
+    toggle.addEventListener("click", () => {
+      const now = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const next = now === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      toggle.setAttribute("aria-pressed", String(next === "dark"));
+      storeTheme(next);
+    });
+  }
+})();
+
+// ===========================================================
 // Footer year
 // ===========================================================
 document.querySelectorAll("#year").forEach((el) => {
@@ -108,7 +149,7 @@ if (postRoot && typeof POSTS !== "undefined") {
     if (postMeta) postMeta.textContent = `${post.date} — ${post.tag}`;
     if (postTitle) postTitle.textContent = post.title;
     if (postBody) {
-      const imagePattern = /^!\[(.*)\]\((.*)\)$/;
+      const imagePattern = /^!\[(.*?)\]\((.*?)\)$/;
       postBody.innerHTML = post.body
         .map((block) => {
           if (block.startsWith("## ")) {
