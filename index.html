@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jacob Baldwin — UI/UX Designer &amp; AI Builder</title>
 <meta name="description" content="Jacob Baldwin is a UI/UX designer and AI builder crafting thoughtful interfaces and intelligent systems.">
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("jb-theme");
+      var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      // Storage/matchMedia unavailable — default to light, no flash prevention needed.
+    }
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,6 +35,10 @@
       <a href="blog.html">Journal</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+    </button>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -74,26 +89,27 @@
           <p>A universal instrument tuner web application</p>
         </a>
       </article>
+
       <article class="work-card">
         <a href="https://thickoatmeal2.github.io/bluemilkshake/" target="_blank" rel="noopener noreferrer" class="work-card-link">
           <div class="work-card-thumb">
-            <img src="images/gigaflex-thumb.png" alt="gigaflex interface showing dispatch screen">
+            <img src="images/gigaflex-thumb.png" alt="GigaFlex Dispatch app showing live fleet map, driver list, and delivery status">
           </div>
-          <h4>Gigaflex delivery</h4>
+          <h3>Gigaflex delivery</h3>
           <p>A delivery application for drivers, dispatchers, and customers</p>
         </a>
       </article>
-      </article>
-      </article>
+
       <article class="work-card">
         <a href="https://thickoatmeal2.github.io/miles-kilometers_converter/" target="_blank" rel="noopener noreferrer" class="work-card-link">
-          <div class="work-card-thumb"> 
-            <img src="images/mile-km-converter-thumb.png" alt="miles-km-converter desktop interface">
+          <div class="work-card-thumb">
+            <img src="images/mile-km-converter-thumb.png" alt="Miles and KM unit converter interface with two input fields">
           </div>
-          <h5>Miles-kilometers converter</h5>
-          <p>Convert miles - kilometers</p>
+          <h3>Mile ↔ KM Converter</h3>
+          <p>A small unit-conversion tool for switching between miles and kilometers</p>
         </a>
       </article>
+
       <article class="work-card work-card-empty"></article>
 
     </div>
@@ -142,8 +158,7 @@
       <h2>Where I've worked.</h2>
     </div>
 
-
-      <div class="resume-list">
+    <div class="resume-list">
       <div class="resume-item">
         <div class="resume-item-head">
           <h3>AI Trainer, Outlier AI</h3>
@@ -168,7 +183,6 @@
     </div>
 
     <a href="resume.pdf" class="btn btn-ghost resume-download">Download Résumé (PDF) ↓</a>
-    </div>
   </section>
 
   <!-- CONTACT -->
@@ -182,11 +196,10 @@
       to reach me is email.
     </p>
     <div class="contact-links">
-      <a href="mailto:jacob.baldwin@pursuit.org" class="contact-link">jacob.baldwin@pursuit.org</a>
-        <div class="contact-social">
+      <a href="mailto:hello@jacobbaldwin.com" class="contact-link">hello@jacobbaldwin.com</a>
+      <div class="contact-social">
         <a href="https://www.linkedin.com/in/jacob-baldwin-33198898/" target="_blank" rel="noopener noreferrer" class="contact-social-link">LinkedIn</a>
         <a href="https://github.com/thickoatmeal2?tab=repositories" target="_blank" rel="noopener noreferrer" class="contact-social-link">GitHub</a>
-
       </div>
     </div>
   </section>
